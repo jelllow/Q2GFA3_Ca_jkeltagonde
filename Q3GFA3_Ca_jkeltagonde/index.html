@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomly Generated Number</title>
+</head>
+
+<body>
+    <div id="rgn"></div>
+    <div id="breakdown"></div>
+    <div id="date"></div>
+    <script>
+        interval = Math.floor(Math.random() * 1001);
+        document.getElementById("rgn").innerHTML = "Randomly Generated Number: " + interval;
+
+        tens = interval % 100;
+        ones = interval % 10;
+        tens = tens - ones;
+        hundreds = interval - tens - ones;
+        document.getElementById("breakdown").innerHTML = "Breakdown: " + hundreds + ", " + tens + ", " + ones;
+
+        date = new Date();
+        document.getElementById("date").innerHTML = date;
+    </script>
+</body>
+
+</html>
